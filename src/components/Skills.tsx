@@ -29,17 +29,6 @@ const Skills = () => {
     },
   ];
 
-  const allSkills = [
-    { name: 'Java', level: 90 },
-    { name: 'Python', level: 85 },
-    { name: 'React', level: 80 },
-    { name: 'Node.js', level: 75 },
-    { name: 'MySQL', level: 85 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'HTML/CSS', level: 90 },
-    { name: 'GitHub', level: 85 },
-  ];
-
   return (
     <section id="skills" className="section-padding">
       <div className="max-w-6xl mx-auto">
@@ -53,7 +42,7 @@ const Skills = () => {
         </div>
 
         {/* Skill Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
@@ -77,27 +66,6 @@ const Skills = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Skill Progress Bars */}
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 card-glow">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Proficiency Levels</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {allSkills.map((skill, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  <span className="text-muted-foreground">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-primary rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

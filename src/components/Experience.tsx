@@ -72,7 +72,7 @@ const Experience = () => {
                       {exp.description.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-muted-foreground leading-relaxed">{item}</p>
+                          
                         </div>
                       ))}
                     </div>

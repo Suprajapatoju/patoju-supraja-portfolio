@@ -1,10 +1,8 @@
 import { GraduationCap, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-muted/30">
+  return <section id="about" className="section-padding bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -20,19 +18,18 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-primary">My Story</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                I'm a Computer Science Engineering student with a solid foundation in technical skills, 
-                communication, and team management. My passion lies in applying my knowledge to real-world 
-                projects and continually honing my skillset.
-              </p>
+              <p className="text-muted-foreground leading-relaxed text-lg">I'm a dedicated Computer Science and Engineering student at Vignan's Institute of Engineering for Women, with a strong foundation in Full Stack Development, Java, and core Computer Science principles. I am passionate about applying my knowledge to real-world challenges and building impactful software solutions.
+
+With hands-on experience in Java, JavaScript, React.js, Node.js, and Data Structures and Algorithms, I’ve worked on academic and personal projects that reflect my ability to solve problems efficiently and think analytically. I’m particularly interested in Machine Learning, AI, and AWS, and I am actively expanding my skills in these domains through self-driven learning and internships.
+
+Beyond technical abilities, I possess strong communication, leadership, and team management skills, having successfully led project teams and organized tech-related events. I enjoy collaborating with others, sharing knowledge, and contributing to innovative ideas that create value.
+
+Driven by curiosity and a growth mindset, I continuously strive to improve my expertise, explore new technologies, and become a well-rounded software engineer capable of adapting to dynamic industry needs.</p>
             </div>
             
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                With a strong academic background and hands-on experience in AI & ML, I'm dedicated 
-                to creating innovative solutions that make a meaningful impact. I believe in the power 
-                of technology to solve complex problems and improve lives.
-              </p>
+            </p>
             </div>
 
             <Button className="bg-gradient-secondary hover:opacity-90 text-accent-foreground">
@@ -87,8 +84,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;

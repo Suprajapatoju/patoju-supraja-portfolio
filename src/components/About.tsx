@@ -20,11 +20,8 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4 text-primary">My Story</h3>
               <p className="text-muted-foreground leading-relaxed text-lg">I'm a dedicated Computer Science and Engineering student at Vignan's Institute of Engineering for Women, with a strong foundation in Full Stack Development, Java, and core Computer Science principles. I am passionate about applying my knowledge to real-world challenges and building impactful software solutions.
 
-With hands-on experience in Java, JavaScript, React.js, Node.js, and Data Structures and Algorithms, I’ve worked on academic and personal projects that reflect my ability to solve problems efficiently and think analytically. I’m particularly interested in Machine Learning, AI, and AWS, and I am actively expanding my skills in these domains through self-driven learning and internships.
 
-Beyond technical abilities, I possess strong communication, leadership, and team management skills, having successfully led project teams and organized tech-related events. I enjoy collaborating with others, sharing knowledge, and contributing to innovative ideas that create value.
-
-Driven by curiosity and a growth mindset, I continuously strive to improve my expertise, explore new technologies, and become a well-rounded software engineer capable of adapting to dynamic industry needs.</p>
+With hands-on experience in Java, JavaScript, React.js, Node.js, and Data Structures and Algorithms, I’ve worked on academic and personal projects that reflect my ability to solve problems efficiently and think analytically. I’m particularly interested in Machine Learning, AI and I am actively expanding my skills in these domains through self-driven learning and internships. Beyond technical abilities, I possess strong communication, leadership, and team management skills, having successfully led project teams and organized tech-related events. I enjoy collaborating with others, sharing knowledge, and contributing to innovative ideas that create value. Driven by curiosity and a growth mindset, I continuously strive to improve my expertise, explore new technologies, and become a well-rounded software engineer capable of adapting to dynamic industry needs.</p>
             </div>
             
             <div>

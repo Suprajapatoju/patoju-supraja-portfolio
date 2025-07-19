@@ -72,16 +72,6 @@ const Projects = () => {
                           <Github className="h-4 w-4" />
                         </a>
                       </Button>
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
-                        className="p-2 hover:bg-primary/10"
-                        asChild
-                      >
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </Button>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">

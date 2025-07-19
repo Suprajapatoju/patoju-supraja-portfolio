@@ -123,14 +123,16 @@ const Projects = () => {
         <div className="text-center mt-16">
           <Card className="card-glow border-secondary/20 max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-4 text-secondary">More Projects Coming Soon</h3>
+              <h3 className="text-xl font-semibold mb-4 text-secondary">View More Projects</h3>
               <p className="text-muted-foreground mb-6">
                 I'm constantly working on new projects and exploring emerging technologies. 
                 Check out my GitHub for the latest updates and contributions.
               </p>
-              <Button className="bg-gradient-secondary hover:opacity-90 text-accent-foreground">
-                <Github className="mr-2 h-4 w-4" />
-                View GitHub Profile
+              <Button className="bg-gradient-secondary hover:opacity-90 text-accent-foreground" asChild>
+                <a href="https://github.com/Suprajapatoju" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  View GitHub Profile
+                </a>
               </Button>
             </CardContent>
           </Card>

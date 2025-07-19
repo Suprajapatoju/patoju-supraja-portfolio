@@ -9,6 +9,8 @@ const Experience = () => {
       location: 'Online',
       duration: 'Jun 2024 - Jul 2024',
       description: [
+        'Acquired foundational knowledge in machine learning through the development of an Employee Burnout Prediction project. The project involved understanding key ML concepts and applying basic regression-based analysis to identify patterns in employee data',
+        'Focused on recognizing potential burnout indicators to support early interventions and promote organizational well-being',
         'Worked on an Employee Burnout Prediction model using regression techniques',
         'Gained insights into ML workflows and practical applications in organizational health analytics',
         'Implemented data preprocessing and model evaluation strategies'
@@ -71,7 +73,7 @@ const Experience = () => {
                       {exp.description.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                          
+                          <p className="text-muted-foreground leading-relaxed">{item}</p>
                         </div>
                       ))}
                     </div>

@@ -10,6 +10,15 @@ const Hero = () => {
       });
     }
   };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   return <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
@@ -33,20 +42,35 @@ const Hero = () => {
               Learn More About Me
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10">
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10">
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
           </div>
 
           <div className="flex gap-4 justify-center lg:justify-start">
-            <Button variant="ghost" size="sm" className="p-2 hover:bg-primary/10">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="p-2 hover:bg-primary/10"
+              onClick={() => window.open('https://github.com/Suprajapatoju', '_blank')}
+            >
               <Github className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="p-2 hover:bg-primary/10">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="p-2 hover:bg-primary/10"
+              onClick={() => window.open('https://www.linkedin.com/in/suprajapatoju/', '_blank')}
+            >
               <Linkedin className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="p-2 hover:bg-primary/10">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="p-2 hover:bg-primary/10"
+              onClick={() => window.open('mailto:suprajapatoju@gmail.com', '_blank')}
+            >
               <Mail className="h-5 w-5" />
             </Button>
           </div>

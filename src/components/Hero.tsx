@@ -1,17 +1,16 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile-image.jpg';
-
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
       
@@ -26,26 +25,15 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-primary font-medium">
               Empowering Solutions with Code & Creativity
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              A passionate Computer Science Engineering student focused on applying technical knowledge 
-              to real-world problems through impactful projects.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl">I’m a Computer Science Engineering student with a strong foundation in technical skills, communication, and team management. I’m passionate about applying my knowledge to real-world projects and constantly striving to enhance my skillset.</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button 
-              onClick={scrollToAbout}
-              size="lg" 
-              className="btn-glow bg-gradient-primary hover:opacity-90 text-primary-foreground"
-            >
+            <Button onClick={scrollToAbout} size="lg" className="btn-glow bg-gradient-primary hover:opacity-90 text-primary-foreground">
               Learn More About Me
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary/20 hover:bg-primary/10"
-            >
+            <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10">
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
@@ -68,11 +56,7 @@ const Hero = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             <div className="w-80 h-80 rounded-full overflow-hidden card-glow border border-primary/20">
-              <img 
-                src={profileImage} 
-                alt="Patoju Supraja" 
-                className="w-full h-full object-cover"
-              />
+              <img src={profileImage} alt="Patoju Supraja" className="w-full h-full object-cover" />
             </div>
             <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10"></div>
           </div>
@@ -85,8 +69,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

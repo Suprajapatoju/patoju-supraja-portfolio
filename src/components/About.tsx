@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://patoju-supraja-resume.tiiny.site/';
+    link.href = 'https://drive.google.com/uc?export=download&id=1pQUqYtlVtp8GHK2Eu8Le5VczavoMQ_n1';
     link.download = 'Supraja_Patoju_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);

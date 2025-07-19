@@ -8,35 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 23% 5%;
+    --foreground: 220 5% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 20% 8%;
+    --card-foreground: 220 5% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 220 5% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 280 65% 75%;
+    --primary-foreground: 220 23% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 160 45% 70%;
+    --secondary-foreground: 220 23% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 70% 75%;
+    --accent-foreground: 220 23% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 220 5% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 280 65% 75%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Portfolio specific colors */
+    --lavender: 280 65% 75%;
+    --mint: 160 45% 70%;
+    --peach: 25 70% 75%;
+    --teal: 180 50% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--lavender)), hsl(var(--mint)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--peach)), hsl(var(--teal)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(220 15% 12%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(220 23% 5% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +119,34 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+  
+  .card-glow {
+    box-shadow: var(--shadow-card);
+    background: var(--gradient-card);
+  }
+  
+  .btn-glow {
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
   }
 }

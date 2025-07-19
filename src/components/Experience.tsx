@@ -11,6 +11,7 @@ const Experience = () => {
       description: [
         'Worked on an Employee Burnout Prediction model using regression techniques',
         'Gained insights into ML workflows and practical applications in organizational health analytics',
+        'Collaborated with team members to analyze fatigue and workload metrics',
         'Implemented data preprocessing and model evaluation strategies'
       ],
       type: 'Internship',

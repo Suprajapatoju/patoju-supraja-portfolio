@@ -62,11 +62,22 @@ const Contact = () => {
 
       // Reset form
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('EmailJS error:', error);
+      
+      let errorMessage = "Please try again later or contact me directly.";
+      
+      if (error.status === 400) {
+        if (error.text?.includes('template ID not found')) {
+          errorMessage = "Email service configuration issue. Please contact me directly using the information above.";
+        } else if (error.text?.includes('service ID not found')) {
+          errorMessage = "Email service configuration issue. Please contact me directly using the information above.";
+        }
+      }
+      
       toast({
         title: "Failed to send message",
-        description: "Please try again later or contact me directly.",
+        description: errorMessage,
         variant: "destructive",
       });
     }

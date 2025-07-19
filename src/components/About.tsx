@@ -3,6 +3,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = 'https://patoju-supraja-resume.tiiny.site/';
+    link.download = 'Supraja_Patoju_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="section-padding bg-muted/30">
       <div className="max-w-6xl mx-auto">
@@ -33,7 +43,7 @@ const About = () => {
               </p>
             </div>
 
-            <Button className="bg-gradient-secondary hover:opacity-90 text-accent-foreground">
+            <Button onClick={downloadResume} className="bg-gradient-secondary hover:opacity-90 text-accent-foreground">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>

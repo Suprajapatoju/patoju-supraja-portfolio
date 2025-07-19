@@ -6,7 +6,7 @@ const Experience = () => {
     {
       title: 'AI & ML Intern',
       company: 'APSSDC',
-      location: 'Remote',
+      location: 'Online',
       duration: 'Jun 2024 - Jul 2024',
       description: [
         'Worked on an Employee Burnout Prediction model using regression techniques',

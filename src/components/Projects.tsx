@@ -10,7 +10,7 @@ const Projects = () => {
       technologies: ['Java', 'JDBC', 'MySQL', 'Swing GUI'],
       icon: Users,
       gradient: 'bg-gradient-primary',
-      github: '#',
+      github: 'https://github.com/Suprajapatoju/Student-Counselling-System',
       demo: '#',
       highlights: ['Database Management', 'GUI Interface', 'Session Tracking']
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       technologies: ['Python', 'BioMistral7B', 'PubMedBert', 'NLP', 'AI/ML'],
       icon: Heart,
       gradient: 'bg-gradient-secondary',
-      github: '#',
+      github: 'https://github.com/Suprajapatoju/MedicalChatBot',
       demo: '#',
       highlights: ['Medical AI', 'NLP Processing', 'Risk Assessment']
     },
@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'Regression Analysis'],
       icon: Brain,
       gradient: 'bg-gradient-primary',
-      github: '#',
+      github: 'https://github.com/Suprajapatoju/Employee-Burnout-Prediction',
       demo: '#',
       highlights: ['Predictive Analytics', 'Workplace Wellness', 'Data Analysis']
     },
@@ -62,11 +62,25 @@ const Projects = () => {
                       <IconComponent className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div className="flex gap-2">
-                      <Button variant="ghost" size="sm" className="p-2 hover:bg-primary/10">
-                        <Github className="h-4 w-4" />
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="p-2 hover:bg-primary/10"
+                        asChild
+                      >
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                        </a>
                       </Button>
-                      <Button variant="ghost" size="sm" className="p-2 hover:bg-primary/10">
-                        <ExternalLink className="h-4 w-4" />
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="p-2 hover:bg-primary/10"
+                        asChild
+                      >
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
                       </Button>
                     </div>
                   </div>
